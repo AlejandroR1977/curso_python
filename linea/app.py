@@ -1,4 +1,7 @@
 #calculo de coordenadas de lineas
+import argparse
+import matplotlib.pyplot as plt
+import funciones
 def calcular_y(x:float,m:float,b:float)->float:
     '''
     Calcula el valor de y en una linea recta
@@ -16,12 +19,13 @@ def main():
     #Y = [funciones.calcular_y(x, m, b) fo x in X]
     #print ("Enteros:")
     #coordenadas:enteros = list(zip(X, Y))
-    print(coordenadas_enteros)
-    XF = [x for x in range(1,11,0.5)]
-    XY = [funciones.calcular_y(x, m, b) for x in XF]
-    coordenadas_flotantes = list(zip(XF,XY))
+    #print(coordenadas_enteros)
+    X = [x for x in range(1,11,0.5)]
+    Y = [funciones.calcular_y(x, m, b) for x in X]
+    coordenadas_flotantes = list(zip(X,Y))
     print("Flotantes")
     print(coordenadas_flotantes)
+    funciones.grafica_linea(X, Y, m, b)
 
 
 if _name_ == '_main_':
