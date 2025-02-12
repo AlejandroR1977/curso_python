@@ -27,7 +27,7 @@ def despliega_plantilla(diccionario:dict, nivel:int):
 if __name__ == '__main__':
     plantilla = carga_plantillas('plantilla')
     despliega_plantilla(plantilla,5)
-    #lista_oraciones = carga_archivo_texto('C:/Users/52662/Desktop/Desarrollo4_WalterAlejandro/curso_python/ahorcado/datos/pg15523.txt')
-    #print(lista_oraciones[110:115])
-    #texto = "".join(lista_oraciones[110:])
-    #print(texto[:100])
+    lista_oraciones = carga_archivo_texto('C:/Users/52662/Desktop/Desarrollo4_WalterAlejandro/curso_python/ahorcado/datos/pg15532.txt')
+    print(lista_oraciones[110:115])
+    texto = "".join(lista_oraciones[110:])
+    print(texto[:100])
