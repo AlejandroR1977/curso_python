@@ -1,38 +1,22 @@
-#calculo de coordenadas de lineas
+''' cálculo de coordenadas de líneas '''
 import argparse
-import matplotlib.pyplot as plt
 import funciones
-def calcular_y(x:float,m:float,b:float)->float:
-    '''
-    Calcula el valor de y en una linea recta
-    x: el valor de x
-    m: pendiente
-    b: intersección en y  
-    regresa el valor de y:
-    '''
-    return (m*x) + b
 
-def main():
-    #m = 2
-    #b = 3
-    #X = [x for x in range(1,11)]
-    #Y = [funciones.calcular_y(x, m, b) fo x in X]
-    #print ("Enteros:")
-    #coordenadas:enteros = list(zip(X, Y))
-    #print(coordenadas_enteros)
-    X = [x for x in range(1,11,0.5)]
+def main(m:float, b:float):
+    '''
+    Función principal que calcula las coordenadas de una línea recta
+    Recibimos m y b
+    Regresa: nada'''
+    X = [x/10.0 for x in range(10,110,5)]
     Y = [funciones.calcular_y(x, m, b) for x in X]
-    coordenadas_flotantes = list(zip(X,Y))
-    print("Flotantes")
-    print(coordenadas_flotantes)
-    funciones.grafica_linea(X, Y, m, b)
+    coordenadas= list(zip(X,Y))
+    print(coordenadas)
+    funciones.grafica_linea(X,Y, m, b)
 
-
-if _name_ == '_main_':
-    parser = argparse.ArgumentPerser()
-    parser.add_argument('-m', type=float,
-    helps='Pendiente de la linea', default=2.0)
-    parser.add_argument('-b', type=float,
-    helps='Ordenada al origen', default=3.0)
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Calcula las coordenadas de una línea recta')
+    parser.add_argument('-m', type=float, help='Pendiente de la línea', default=2.0)
+    parser.add_argument('-b', type=float, help='Intersección en y', default=3.0)
     args = parser.parse_args()
     main(args.m, args.b)
+    #main(m=2.0, b=3.0)

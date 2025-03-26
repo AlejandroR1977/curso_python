@@ -1,3 +1,2 @@
-#Mi primer programa de hola mundo en python
-print("Hola Alejandro")
-print("Hello World")
+print('Hello world')
+print("Este es mi nombre")

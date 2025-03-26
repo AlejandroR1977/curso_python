@@ -12,7 +12,7 @@
     {
         "name": "Baseball",
         "players": 9,
-        "league": "mlb"
+        "league": "MLB"
     },
     {
         "name": "Soccer",
@@ -20,7 +20,7 @@
         "league": "Liga MX"
     },
     {
-        "name": "basketball",
+        "name": "Basketball",
         "players": 5,
         "league": "NBA"
     },

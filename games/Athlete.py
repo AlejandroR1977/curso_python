@@ -27,4 +27,3 @@ if __name__ == "__main__":
     b = eval(b)
     print(b)
     print(f"b: {id(b)}")
-
